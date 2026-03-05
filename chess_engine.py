@@ -723,6 +723,7 @@ class ChessBoard:
         return pieces
 
 
+
 # Evaluation Function
 def evaluate_board(board):
     score = 0
@@ -738,6 +739,8 @@ def evaluate_board(board):
                     score -= value
     
     return score
+
+
 
 # writing the minimax function
 def minimax(board, depth, maximizing_player):
@@ -764,6 +767,7 @@ def minimax(board, depth, maximizing_player):
         return min_eval
 
 
+
 # the chess bot class
 class ChessBot:
     def __init__(self, color, depth):
@@ -783,6 +787,7 @@ class ChessBot:
                         best_score = score
                         best_move = ((row, col), move)
         return best_move
+
 
 # P v P game loop
 def play_chess():
@@ -811,6 +816,7 @@ def play_chess():
             current_player = 'black' if current_player == 'white' else 'white'
         else:
             print("Invalid move. Try again.")
+
 
 
 # chess bot game loop
