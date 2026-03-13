@@ -3,7 +3,7 @@ import copy
 class ChessPiece: # parent class for chess pieces
     def __init__(self, color):
         self.color = color
-        self.has_moved = False # used for castling/pawns' initial moves etc.
+        self.has_moved = False  # used for castling/pawns' initial moves etc.
 
 # all the child piece classes of the ChessPiece parent class
 class Pawn(ChessPiece):
@@ -602,9 +602,10 @@ class ChessBoard:
                     print(".", end=" ")
             print(f"{row + 1}")
         print("  a b c d e f g h")
+        
 
     def move_piece(self, start, end):
-        start_row, start_col = start
+        start_row, start_col  =  start
         end_row, end_col = end
 
         piece = self.board[start_row][start_col]
